@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.106
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeService", "EmployeeService\EmployeeService.csproj", "{158B2039-347E-41EB-9B69-2023AF074115}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeDataAccess", "EmployeeDataAccess1\EmployeeDataAccess.csproj", "{3CB1DB49-DADC-46ED-9CD1-36AD4A8483F1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3C7F6032-F46D-42D0-8939-524877D7523A}"
+	ProjectSection(SolutionItems) = preProject
+		TextFile1.txt = TextFile1.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{158B2039-347E-41EB-9B69-2023AF074115}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{158B2039-347E-41EB-9B69-2023AF074115}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{158B2039-347E-41EB-9B69-2023AF074115}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{158B2039-347E-41EB-9B69-2023AF074115}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CB1DB49-DADC-46ED-9CD1-36AD4A8483F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CB1DB49-DADC-46ED-9CD1-36AD4A8483F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CB1DB49-DADC-46ED-9CD1-36AD4A8483F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CB1DB49-DADC-46ED-9CD1-36AD4A8483F1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {512ED2CE-5EC6-494C-974C-84F67D4A4698}
+	EndGlobalSection
+EndGlobal

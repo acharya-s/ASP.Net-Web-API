@@ -1,0 +1,65 @@
+Read me File
+
+
+Execute the following SQL Script using SQL Server Management studio. This script creates
+	1. EmployeeDB database
+	2. Creates the Employees table and populate it with sample data
+
+	Create Database EmployeeDB
+	Go
+
+	Use EmployeeDB
+	Go
+
+	Create table Employees
+	(
+		 ID int primary key identity,
+		 FirstName nvarchar(50),
+		 LastName nvarchar(50),
+		 Gender nvarchar(50),
+		 Salary int
+	)
+	Go
+
+	Insert into Employees values('Mark', 'Hastings', 'Male', 60000)
+	Insert into Employees values('Steve', 'Pound', 'Male', 45000)
+	Insert into Employees values('Ben', 'Hoskins', 'Male', 70000)
+	Insert into Employees values('Philip', 'Hastings', 'Male', 45000)
+	Insert into Employees values('Mary', 'Lambeth', 'Female', 30000)
+	Insert into Employees values('Valarie', 'Vikings', 'Female', 35000)
+	Insert into Employees values('John', 'Stanmore', 'Male', 80000)
+	Go
+
+Content Negotiation
+
+One of the standards of the RESTful service is that, the client should have the ability to decide in which format they want the response - XML, JSON etc. 
+A request that is sent to the server includes an Accept header. Using the Accept header the client can specify the format for the response. For example
+
+Accept: application/xml returns XML
+Accept: application/json returns JSON
+
+Depending on the Accept header value in the request, the server sends the response. This is called Content Negotiation. 
+
+I used Fiddler to produce results in either XML or JSON as below:
+	 Run the solution, get the following two lines in Composer tab and execute
+	 Host: localhost: xxxxx
+	 Accept: application/json  application/xml
+
+	 Select the results in left hand and check the contect-type in Headrs and formatting in Raw, JSON and XML tabs
+
+What is MediaTypeFormatter?
+	MediaTypeFormatter is an abstract class from which JsonMediaTypeFormatter and XmlMediaTypeFormatter classes inherit from. 
+	JsonMediaTypeFormatter handles JSON and XmlMediaTypeFormatter handles XML.
+
+
+Register the custom formatter
+article that describes how to return CSV formatted data from ASP.NET Web API
+ASP.NET Web API is an extinsible framework. This means you can also plugin your own custom formatter. For example, if you want the response to be in CSV format,
+you can create custom CSVMediaTypeFormatter that inherits from the base abstract class MediaTypeFormatter . The following article describes how to do this.
+http://www.tugberkugurlu.com/archive/creating-custom-csvmediatypeformatter-in-asp-net-web-api-for-comma-separated-values-csv-format 
+
+Here are the important points to remember
+If a method return type is void, by default status code 204 No Content is returned.
+When a new item is created, we should be returning status code 201 Item Created.
+With 201 status code we should also include the location i.e URI of the newly created item. 
+When an item is not found, instead of returning NULL and status code 200 OK, return 404 Not Found status code along with a meaningful message such as "Employee with Id = 101 not found"
